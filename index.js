@@ -69,7 +69,7 @@ async function addDepartment(){
         name:"departmentAdd",
         message:"What department would you like to add?",
         }])
-    let department = await connection.query("SELECT * FROM employee;");
+    let department = await connection.query("INSERT INTO department VALUES departmentAdd;;");
     console.table(department);
     prompts();
 }
@@ -87,7 +87,7 @@ async function addRole(){
         }
             
     ])
-    let employees = await connection.query("SELECT * FROM employee;");
+    let employees = await connection.query("INSERT INTO role VALUES addRole, addSalary;");
     console.table(employees);
     prompts();
 }
@@ -106,12 +106,12 @@ async function addEmployee(){
         {
         type:"input",
         name:"addEmpDept",
-        message:"What is the employee's department?",
+        message:"What is the employee's role?",
         }
     
     
     ])
-    let employees = await connection.query("SELECT * FROM employee;");
+    let employees = await connection.query("INSERT INTO employee VALUES addFirst, addLast, addEmpDept;;");
     console.table(employees);
     prompts();
 }
@@ -128,7 +128,7 @@ async function updateRoles(){
         message:"What is the employee's new role?",
         },
         ])
-    let departments = await connection.query("SELECT * FROM department;");
+    let departments = await connection.query("UPDATE employee SET role_id WHERE name = employeeUpdate;");
     console.table(departments);
     prompts();
 };
